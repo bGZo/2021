@@ -34,7 +34,8 @@ jobs:
         if: steps.pip-cache.outputs.cache-hit != 'true'
       
       - name: issueDashboard
-        ACCESS_TOKEN: ${{ secrets.G_T }}
+        env: # Or as an environment variable
+          ACCESS_TOKEN: ${{ secrets.G_T }}
         run: |
           python issueDashboard.py $ACCESS_TOKEN
 #         if: ${{ github.event.issue.number }} == ${{ env.BOOKMARK_ISSUE_ID }}
