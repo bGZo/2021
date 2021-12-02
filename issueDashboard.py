@@ -5,11 +5,17 @@ from config import (
     IssueTableHead,
     IssueTableTemplate
 )
-import sys
+import argparse
 
+# import sys
+
+parser = argparse.ArgumentParser()
+parser.add_argument("github_token", help="github_token")
+options = parser.parse_args()
+GithubToken = options.github_token
 
 issueFileName = "index.md"
-GithubToken = sys.argv[1]
+# GithubToken = sys.argv[1]
 
 print(GithubToken)
 
