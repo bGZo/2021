@@ -1,4 +1,3 @@
-#! /usr/bin/python3
 from github import Github
 # from cfig import GithubToken
 from config import (
