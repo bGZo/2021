@@ -23,7 +23,7 @@ with open(issueFileName, "w+") as f:
     for issue in openIssues:
         issueName = str(issue.title)
         issueUpdate = str(issue.updated_at)
-        issueUrl = '[#'+ str(issue.number) +'](' + str(issue.url)
+        issueUrl = '[#'+ str(issue.number) +'](' + str(issue.url) + ')'
 
         f.write( IssueTableTemplate.format(
             issueName = issueName, 
