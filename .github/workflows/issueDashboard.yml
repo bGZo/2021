@@ -34,8 +34,10 @@ jobs:
         if: steps.pip-cache.outputs.cache-hit != 'true'
       
       - name: issueDashboard
+        env:
+          SUPER_SECRET: ${{ secrets.GithubTaken }}
         run: |
-          python issueDashboard.py {{ secret.GITHUBTOKEN }}
+          python issueDashboard.py "$env:GITHUBTOKEN"
 #         if: ${{ github.event.issue.number }} == ${{ env.BOOKMARK_ISSUE_ID }}
       - name: Push new Bookmark
         uses: github-actions-x/commit@v2.6
