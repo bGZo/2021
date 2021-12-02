@@ -33,7 +33,7 @@ with open(issueFileName, "w+") as f:
         issueUrl = '#'+ str(issue.number)
 
         f.write( IssueTableTemplate.format(
-#             issueName = issueName, 
-#             issueUpdate = issueUpdate, 
-#             issueUrl = issueUrl
-#         ) )
+            issueName = issueName, 
+            issueUpdate = issueUpdate, 
+            issueUrl = issueUrl
+        ) )
