@@ -36,8 +36,9 @@ jobs:
       - name: issueDashboard
         env:
           gt: ${{ secrets.G_T }}
+          test: ${{ secrets.TEST }}
         run: |
-          python3 issueDashboard.py "$gt"
+          python3 issueDashboard.py "$test"
 
       - name: Push new Bookmark
         uses: github-actions-x/commit@v2.6
