@@ -13,27 +13,27 @@ parser.add_argument("github_token", help="github_token")
 options = parser.parse_args()
 GithubToken = options.github_token
 
-issueFileName = "index.md"
-# GithubToken = sys.argv[1]
+GithubToken = sys.argv[1]
+print(GithubToken)
 
-# print(GithubToken)
+# issueFileName = "index.md"
 
-g = Github(GithubToken)
-me = g.get_user().login
+# g = Github(GithubToken)
+# me = g.get_user().login
 
-repo = g.get_repo("bgzocg/2021")
-openIssues = repo.get_issues(state='open', sort='updated') # creator=me,
+# repo = g.get_repo("bgzocg/2021")
+# openIssues = repo.get_issues(state='open', sort='updated') # creator=me,
 
 
-with open(issueFileName, "w+") as f:
-    f.write( IssueTableHead )
-    for issue in openIssues:
-        issueName = str(issue.title)
-        issueUpdate = str(issue.updated_at)
-        issueUrl = '#'+ str(issue.number)
+# with open(issueFileName, "w+") as f:
+#     f.write( IssueTableHead )
+#     for issue in openIssues:
+#         issueName = str(issue.title)
+#         issueUpdate = str(issue.updated_at)
+#         issueUrl = '#'+ str(issue.number)
 
-        f.write( IssueTableTemplate.format(
-            issueName = issueName, 
-            issueUpdate = issueUpdate, 
-            issueUrl = issueUrl
-        ) )
+#         f.write( IssueTableTemplate.format(
+#             issueName = issueName, 
+#             issueUpdate = issueUpdate, 
+#             issueUrl = issueUrl
+#         ) )
