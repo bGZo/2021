@@ -34,8 +34,9 @@ jobs:
         if: steps.pip-cache.outputs.cache-hit != 'true'
       
       - name: issueDashboard
+        ACCESS_TOKEN: ${{ secrets.G_T }}
         run: |
-          python issueDashboard.py ${{ secrets.G_T }}
+          python issueDashboard.py $ACCESS_TOKEN
 #         if: ${{ github.event.issue.number }} == ${{ env.BOOKMARK_ISSUE_ID }}
       - name: Push new Bookmark
         uses: github-actions-x/commit@v2.6
