@@ -12,10 +12,10 @@ issueFileName = "index.md"
 GithubToken = sys.argv[1]
 
 g = Github(GithubToken)
-me = g.get_user().login
+# me = g.get_user().login
 
 repo = g.get_repo("bgzocg/2021")
-openIssues = repo.get_issues(state='open', creator=me, sort='updated')
+openIssues = repo.get_issues(state='open', sort='updated') # creator=me,
 
 
 with open(issueFileName, "w+") as f:
