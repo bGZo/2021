@@ -35,7 +35,7 @@ jobs:
       
       - name: issueDashboard
         run: |
-          python issueDashboard.py ${{ secrets.GithubTaken }}
+          python issueDashboard.py ${{ secrets.GithubTaken.GITHUBTOKEN }}
 #         if: ${{ github.event.issue.number }} == ${{ env.BOOKMARK_ISSUE_ID }}
       - name: Push new Bookmark
         uses: github-actions-x/commit@v2.6
