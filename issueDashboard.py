@@ -15,7 +15,7 @@ g = Github(GithubToken)
 me = g.get_user().login
 
 repo = g.get_repo("bgzocg/2021")
-openIssues = repo.get_issues(state='open', sort='updated') # creator=me,
+openIssues = repo.get_issues(state='open', creator=me, sort='updated')
 
 
 with open(issueFileName, "w+") as f:
@@ -23,7 +23,7 @@ with open(issueFileName, "w+") as f:
     for issue in openIssues:
         issueName = str(issue.title)
         issueUpdate = str(issue.updated_at)
-        issueUrl = '#'+ str(issue.number)
+        issueUrl = '[#'+ str(issue.number) +'](' + str(issue.url)
 
         f.write( IssueTableTemplate.format(
             issueName = issueName, 
