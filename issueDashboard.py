@@ -5,8 +5,11 @@ from config import (
     IssueTableHead,
     IssueTableTemplate
 )
+import sys
+
 
 issueFileName = "index.md"
+GithubToken = sys.argv[1]
 
 g = Github(GithubToken)
 me = g.get_user().login
