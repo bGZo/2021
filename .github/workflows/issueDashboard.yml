@@ -34,8 +34,10 @@ jobs:
         if: steps.pip-cache.outputs.cache-hit != 'true'
       
       - name: issueDashboard
+        env:
+          gt: ${{ secrets.G_T }}
         run: |
-          python3 issueDashboard.py ${{ secrets.G_T }}
+          python3 issueDashboard.py "$gt"
 
       - name: Push new Bookmark
         uses: github-actions-x/commit@v2.6
