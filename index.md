@@ -2,10 +2,10 @@
 
 | Name | Update At | Url |
 | ---- | ---- | ---- |
-| markStack | 2021-12-09 03:19:31 | [#10](https://github.com/bGZoCg/2021/issues/10) |
+| markStack | 2021-12-09 08:21:10 | [#10](https://github.com/bGZoCg/2021/issues/10) |
+| bugTracker | 2021-12-09 08:18:40 | [#12](https://github.com/bGZoCg/2021/issues/12) |
 | gameStack | 2021-12-08 15:55:02 | [#9](https://github.com/bGZoCg/2021/issues/9) |
 | consumeFeelings | 2021-12-08 13:53:37 | [#5](https://github.com/bGZoCg/2021/issues/5) |
-| bugTracker | 2021-12-08 13:49:02 | [#12](https://github.com/bGZoCg/2021/issues/12) |
 | bangumiStack | 2021-12-07 12:28:08 | [#4](https://github.com/bGZoCg/2021/issues/4) |
 | thoughtStack | 2021-12-07 12:07:30 | [#1](https://github.com/bGZoCg/2021/issues/1) |
 | bookStack | 2021-12-02 15:10:53 | [#6](https://github.com/bGZoCg/2021/issues/6) |
